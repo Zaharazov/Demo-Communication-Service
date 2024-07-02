@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <h1> Это главная страница </h1>
+    <h1> Ниже можно зарегистрироваться </h1>
+    <form action="" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="login" placeholder="Your name.." required>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Your password.." required>
+      
+        <input type="submit" value="Register">
+
+    </form>
+    <h1> Ниже можно войти </h1>
+    <form action="" method="post">
+
+        <label for="name">Login:</label>
+        <input type="text" id="name" name="user_login" placeholder="Your login.." required>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="user_pass" placeholder="Your password.." required>
+      
+        <input type="submit" value="Login">
+
+    </form>
+    {{ if eq .ULAccess true}}
+        <a href="http://localhost:8080/users" class="button">Go to users</a>
+    {{ end }}
+</body>
+</html>
