@@ -14,6 +14,8 @@ var client, err = mongo.NewClient(options.Client().ApplyURI(configs.MongoURI))
 
 var Collection = client.Database(configs.DBName).Collection(configs.CollectionName)
 
+var Collection2 = client.Database(configs.DBName).Collection(configs.CollectionName2)
+
 func ConnectToMongo() {
 	// Create connect
 	err = client.Connect(context.TODO())
